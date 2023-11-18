@@ -2,7 +2,7 @@
 <p><strong>Movies:</strong></p>
 <ul>
   <% @list.bookmarks.each do |bookmark| %>
-    <li><%= link_to bookmark.movie.title, bookmark.movie %></li>
-  <% end %>
+  <%= render partial: 'bookmarks/bookmark', locals: { bookmark: bookmark } %>
+<% end %>
 </ul>
 <p><%= link_to 'Back to Lists', lists_path %></p>

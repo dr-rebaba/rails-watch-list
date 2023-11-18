@@ -2,3 +2,4 @@
 <p><strong>List:</strong> <%= link_to @bookmark.list.name, @bookmark.list %></p>
 <p><strong>Comments:</strong> <%= @bookmark.comments %></p>
 <p><%= link_to 'Back to Bookmarks', bookmarks_path %></p>
+<%= link_to 'Delete Bookmark', bookmark_path(@bookmark), method: :delete, data: { confirm: 'Are you sure?' } %>
